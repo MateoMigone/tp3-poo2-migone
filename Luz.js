@@ -6,6 +6,9 @@ function Luz(){
     this.encender = function(){
         this.estado = "encendida"
     }
+    this.apagar = function(){
+        
+    }
 }
 
 module.exports = Luz;
