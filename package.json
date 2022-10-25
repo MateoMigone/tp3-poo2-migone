@@ -193,7 +193,7 @@
   },
   "scripts": {
     "test": "jest",
-    "testpush": "git add . && git commit -m 'Tdd iteration' && git push && jest"
+    "testpush": "git add . && git commit -m \"TDD iteration\" && git push && jest"
   },
   "repository": {
     "type": "git",
