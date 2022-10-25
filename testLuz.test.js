@@ -1,12 +1,20 @@
 const Luz = require('./Luz')
 
-test("crear luz", () => {
+beforeEach(function () {
     const luz = new Luz();
+});
+
+test("crear luz", () => {
     expect (luz.consultarEstado()).toBe("apagada");
 });
 
 test("encender luz", () => {
-    const luz = new Luz();
     luz.encender();
     expect (luz.consultarEstado()).toBe("encendida");
+});
+
+test("encender luz", () => {
+    luz.encender();
+    luz.apagar();
+    expect (luz.consultarEstado()).toBe("apagada");
 });
