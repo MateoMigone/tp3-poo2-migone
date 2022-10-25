@@ -8,5 +8,5 @@ test("crear luz", () => {
 test("encender luz", () => {
     const luz = new Luz();
     luz.encender();
-    expect (luz.consultarEstado()).toBe("apagada");
+    expect (luz.consultarEstado()).toBe("encendida");
 });
