@@ -14,7 +14,7 @@ test("encender luz", () => {
     expect (luz.consultarEstado()).toBe("encendida");
 });
 
-test("encender luz", () => {
+test("apagar luz", () => {
     luz.encender();
     luz.apagar();
     expect (luz.consultarEstado()).toBe("apagada");
