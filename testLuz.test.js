@@ -1,4 +1,4 @@
-const luz = require('./Luz')
+const Luz = require('./Luz')
 
 test("crear luz", () => {
     const luz = new Luz();
