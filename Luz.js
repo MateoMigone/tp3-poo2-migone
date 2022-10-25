@@ -1,7 +1,7 @@
 function Luz(){
     this.estado = "apagada";
     this.consultarEstado = function(){
-        return estado;
+        return this.estado;
     }
     this.encender = function(){
         this.estado = "encendida"
