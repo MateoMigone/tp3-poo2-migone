@@ -1,7 +1,8 @@
 const Luz = require('./Luz')
 
+var luz;
 beforeEach(function () {
-    const luz = new Luz();
+    luz = new Luz();
 });
 
 test("crear luz", () => {
