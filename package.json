@@ -192,7 +192,7 @@
     "yargs-parser": "^21.1.1"
   },
   "scripts": {
-    "test": "jest",
+    "test": "echo \"Error: Shoul run test with command npm run testpush\" && exit 1",
     "testpush": "git add . && git commit -m \"TDD iteration\" && git push && jest"
   },
   "repository": {
