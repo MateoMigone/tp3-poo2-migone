@@ -20,8 +20,15 @@ test("apagar luz", () => {
     expect (luz.consultarEstado()).toBe("apagada");
 });
 
-test("cambiar luz", () => {
+test("cambiar luz de encendida a apagada", () => {
     luz.encender();
     luz.cambiar();
     expect (luz.consultarEstado()).toBe("apagada");
 });
+
+test("cambiar luz de apagada a encendida", () => {
+    luz.apagar();
+    luz.cambiar();
+    expect (luz.consultarEstado()).toBe("encendida");
+});
+
