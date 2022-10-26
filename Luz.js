@@ -7,7 +7,7 @@ function Luz(){
         this.estado = "encendida"
     }
     this.apagar = function(){
-        
+        this.estado = "apagada"
     }
 }
 
