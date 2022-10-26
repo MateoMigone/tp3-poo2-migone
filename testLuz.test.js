@@ -1,4 +1,4 @@
-const Luz = require('./Luz')
+const Luz = require('./Luz');
 
 var luz;
 beforeEach(function () {
