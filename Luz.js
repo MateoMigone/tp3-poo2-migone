@@ -10,15 +10,12 @@ function Luz(){
         this.estado = "apagada";
     }
     this.cambiar = function(){
-        var cambio = function (){
-            if (this.estado == "apagada"){
-                this.estado = "encendida";
-            }
-            else {
-                this.estado = "apagada";
-            }
+        if (this.estado == "apagada"){
+            this.estado = "encendida";
         }
-        
+        else {
+            this.estado = "apagada";
+        }
     }
 }
 
