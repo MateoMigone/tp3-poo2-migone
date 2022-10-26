@@ -4,14 +4,21 @@ function Luz(){
         return this.estado;
     }
     this.encender = function(){
-        this.estado = "encendida"
+        this.estado = "encendida";
     }
     this.apagar = function(){
-        this.estado = "apagada"
+        this.estado = "apagada";
     }
     this.cambiar = function(){
-        var cambio = "apagada"
-        this.estado = cambio;
+        var cambio = function (){
+            if (this.estado == "apagada"){
+                this.estado = "encendida";
+            }
+            else {
+                this.estado = "apagada";
+            }
+        }
+        
     }
 }
 
