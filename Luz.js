@@ -9,6 +9,9 @@ function Luz(){
     this.apagar = function(){
         this.estado = "apagada"
     }
+    this.cambiar = function(){
+        
+    }
 }
 
 module.exports = Luz;
