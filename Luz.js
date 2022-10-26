@@ -11,6 +11,7 @@ function Luz(){
     }
     this.cambiar = function(){
         var cambio = "apagada"
+        this.estado = cambio;
     }
 }
 
