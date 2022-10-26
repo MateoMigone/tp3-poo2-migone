@@ -10,7 +10,7 @@ function Luz(){
         this.estado = "apagada"
     }
     this.cambiar = function(){
-        
+        var cambio = "apagada"
     }
 }
 
