@@ -1,25 +1,20 @@
 function Luz(){
-    this.estado = "apagada";
+    this.estado = 0;
     
     this.consultarEstado = function(){
         return this.estado;
     }
 
     this.encender = function(){
-        this.estado = "encendida";
+        this.estado = 1;
     }
 
     this.apagar = function(){
-        this.estado = "apagada";
+        this.estado = 0;
     }
 
     this.cambiar = function(){
-        if (this.estado == "apagada"){
-            this.estado = "encendida";
-        }
-        else {
-            this.estado = "apagada";
-        }
+        this.estado === 0 ? this.estado = 1 : this.estado = 0;
     }
 }
 
