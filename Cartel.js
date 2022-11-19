@@ -3,7 +3,8 @@ function Cartel(){
         return 0;
     }
 
-    this.cantidadLuces = 10000;
+    this.cantidadLuces = function(){
+        return 10000;
+    }
 }
-
 module.exports = Cartel;
