@@ -38,8 +38,11 @@ function Cartel(filas,columnas){
             }
         }
     }
-    this.apagarLuces = function (){
-        
+    this.apagarLuces = function (esquinaSuperiorIzquierda,esquinaInferiorDerecha){
+        this.matriz[1][1].apagar();
+        this.matriz[1][2].apagar();
+        this.matriz[2][1].apagar();
+        this.matriz[2][2].apagar();
     }
 
 }
