@@ -11,7 +11,7 @@ test("crear cartel", () => {
     var sonTodasLuces = true;
     for (let i=0; i < this.cantFilas; i++){
         for (let j=0; j<this.cantColumnas; j++){
-           sonTodasLuces = Luz.prototype.isPrototypeOf(cartel.matriz[i][j]) ;
+           sonTodasLuces = Luz.prototype.isPrototypeOf(cartel.matriz[0][0]) ;
         }
     }
     expect (sonTodasLuces).toBe(true);
@@ -19,6 +19,8 @@ test("crear cartel", () => {
     expect (cartel.cantidadLuces()).toBe(10000);
     expect (cartel.cantFilas).toBe(100);
     expect (cartel.cantColumnas).toBe(100);
+    
+
 });
 
 test("encender las luces del rectangulo (0,0),(2,2)", () => {
@@ -68,12 +70,7 @@ test("error en los parametros al encender luces", () => {
     }).toThrow("Las esquinas pasadas por parametro deben tener numeros de fila y columna entre 0 y 100");
 });
 
-test("error en los parametros al encender luces", () => {
-    expect(() => {
-        cartel = new Cartel();
-        cartel.encenderLuces([70,80],[60,70]);
-    }).toThrow("La fila y columna de la esquina superior izquierda tiene que ser mayor a la fila y columna de la esquina inferior derecha respectivamente");
-});
+
 
 
 
