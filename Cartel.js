@@ -46,7 +46,10 @@ function Cartel(filas,columnas){
         }
     }
     this.cambiarLuces = function(){
-        
+        this.matriz[0][0].cambiar();
+        this.matriz[0][1].cambiar();
+        this.matriz[1][0].cambiar();
+        this.matriz[1][1].cambiar();
     }
 }
 
