@@ -22,7 +22,7 @@ function Cartel(filas,columnas){
                 x++;
             }
         }
-
+        return x;
     }
 }
 module.exports = Cartel;
