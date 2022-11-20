@@ -1,6 +1,10 @@
 function Cartel(filas,columnas){
     this.matriz = [];
 
+    this.cantidadFilas = function (){
+        return 2
+    }
+
     this.cantidadLucesEncendidas = function(){
         return 0;
     }
