@@ -32,8 +32,8 @@ function Cartel(filas,columnas){
     }
 
     this.encenderLuces = function (esquinaSuperiorIzquierda,esquinaInferiorDerecha){
-        for (let i=esquinaSuperiorIzquierda[0]; i<esquinaInferiorDerecha[0]; i++){
-            for (let j=esquinaSuperiorIzquierda[1]; j<esquinaInferiorDerecha[1]; j++){
+        for (let i=esquinaSuperiorIzquierda[0]; i<=esquinaInferiorDerecha[0]; i++){
+            for (let j=esquinaSuperiorIzquierda[1]; j<=esquinaInferiorDerecha[1]; j++){
                 this.matriz[i][j].encender();
             }
         }
