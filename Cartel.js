@@ -5,6 +5,10 @@ function Cartel(filas,columnas){
         return 2
     }
 
+    this.cantidadColumnas = function (){
+        return 2
+    }
+
     this.cantidadLucesEncendidas = function(){
         return 0;
     }
