@@ -19,8 +19,6 @@ test("crear cartel", () => {
     expect (cartel.cantidadLuces()).toBe(10000);
     expect (cartel.cantFilas).toBe(100);
     expect (cartel.cantColumnas).toBe(100);
-    
-    
 });
 
 test("encender las luces del rectangulo (0,0),(2,2)", () => {
