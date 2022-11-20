@@ -73,7 +73,7 @@ test("error en los parametros al encender luces", () => {
     expect(() => {
         cartel = new Cartel();
         cartel.encenderLuces([70,80],[60,70])
-    }).toThrow("Las filas y columnas de la esquina superior izquierda deben ser mayor respectivamente que las de la esquina inferior derecha");
+    }).toThrow("Las filas y columnas de la esquina superior izquierda deben ser mayores respectivamente que las de la esquina inferior derecha");
 });
 
 
