@@ -31,16 +31,19 @@ function Cartel(){
         return x;
     }
 
-    this.encenderLuces = function (esquinaSuperiorIzquierda,esquinaInferiorDerecha){
-        for (let i=esquinaSuperiorIzquierda[0]; i<=esquinaInferiorDerecha[0]; i++){
-            for (let j=esquinaSuperiorIzquierda[1]; j<=esquinaInferiorDerecha[1]; j++){
+    this.encenderLuces = function (esqSupIzq,esqInfDer){
+        if(esqSupIzq < 0 || esqSupIzq > 100 || esqInfDer < 0 || esqInfDer > 0){
+            throw new Error("Las esquinas pasadas por parametro deben tener numeros de fila y columna entre 0 y 100");
+        }
+        for (let i=esqSupIzq[0]; i<=esqInfDer[0]; i++){
+            for (let j=esqSupIzq[1]; j<=esqInfDer[1]; j++){
                 this.matriz[i][j].encender();
             }
         }
     }
-    this.apagarLuces = function (esquinaSuperiorIzquierda,esquinaInferiorDerecha){
-        for (let i=esquinaSuperiorIzquierda[0]; i<=esquinaInferiorDerecha[0]; i++){
-            for (let j=esquinaSuperiorIzquierda[1]; j<=esquinaInferiorDerecha[1]; j++){
+    this.apagarLuces = function (esqSupIzq,esqInfDer){
+        for (let i=esqSupIzq[0]; i<=esqInfDer[0]; i++){
+            for (let j=esqSupIzq[1]; j<=esqInfDer[1]; j++){
                 this.matriz[i][j].apagar();
             }
         }
