@@ -36,7 +36,7 @@ function Cartel(){
             esqInfDer[0] < 0 || esqInfDer[0] > 99 || esqInfDer[1] < 0 || esqInfDer[1] > 99){
             throw new Error("Las esquinas pasadas por parametro deben tener numeros de fila y columna entre 0 y 100");
         }
-        if(esqSupIzq[0] < esqInfDer[0] || esqSupIzq[1] < esqInfDer[1] ){
+        if(esqSupIzq[0] > esqInfDer[0] || esqSupIzq[1] > esqInfDer[1] ){
             throw new Error("Las filas y columnas de la esquina superior izquierda deben ser mayores respectivamente que las de la esquina inferior derecha");
         }
         for (let i=esqSupIzq[0]; i<=esqInfDer[0]; i++){
