@@ -27,11 +27,13 @@ test("encender las luces del rectangulo (0,0),(2,2)", () => {
     expect (cartel2.matriz[1][1].consultarEstado()).toBe(true);
 });
 
+test("apagar las luces del rectangulo (0,0),(2,2)", () => {
+    expect (cartel2.cantidadLucesEncendidas()).toBe(4);
+    expect (cartel2.matriz[0][0].consultarEstado()).toBe(true);
+    expect (cartel2.matriz[0][1].consultarEstado()).toBe(true);
+    expect (cartel2.matriz[1][0].consultarEstado()).toBe(true);
+    expect (cartel2.matriz[1][1].consultarEstado()).toBe(true);
+});
 
-
-// test("encender luces del rectangulo con vertice superior izquierdo (0,0) e inferior derecho (2,2)", () => {
-//     cartel.encenderLuces([0,0],[2,2]);
-//     expect (cartel.estadoRectangulo([0,0],[2,2])).toBe("encendido");
-// });
 
 
