@@ -21,10 +21,10 @@ test("crear cartel", () => {
 test("encender las luces del rectangulo (0,0),(2,2)", () => {
     cartel2.encenderLuces([0,0],[2,2])
     expect (cartel2.cantidadLucesEncendidas()).toBe(4);
-    expect (cartel2.matriz[0][0].consultarEstado).toBe(true);
-    expect (cartel2.matriz[0][1].consultarEstado).toBe(true);
-    expect (cartel2.matriz[1][0].consultarEstado).toBe(true);
-    expect (cartel2.matriz[1][1].consultarEstado).toBe(true);
+    expect (cartel2.matriz[0][0].consultarEstado()).toBe(true);
+    expect (cartel2.matriz[0][1].consultarEstado()).toBe(true);
+    expect (cartel2.matriz[1][0].consultarEstado()).toBe(true);
+    expect (cartel2.matriz[1][1].consultarEstado()).toBe(true);
 });
 
 
