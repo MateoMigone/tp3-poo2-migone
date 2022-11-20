@@ -1,20 +1,20 @@
 function Luz(){
-    this.estado = 0;
+    this.estado = false;
     
     this.consultarEstado = function(){
         return this.estado;
     }
 
     this.encender = function(){
-        this.estado = 1;
+        this.estado = true;
     }
 
     this.apagar = function(){
-        this.estado = 0;
+        this.estado = false;
     }
 
     this.cambiar = function(){
-        this.estado === 0 ? this.estado = 1 : this.estado = 0;
+        this.estado = !this.estado;
     }
 }
 

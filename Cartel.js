@@ -11,10 +11,6 @@ function Cartel(filas,columnas){
         }
     }
 
-    this.cantidadLucesEncendidas = function(){
-        return 0;
-    }
-
     this.cantidadLuces = function(){
         let x=0;
         for (let i=0; i<this.cantFilas; i++){
@@ -24,5 +20,17 @@ function Cartel(filas,columnas){
         }
         return x;
     }
+
+    this.cantidadLucesEncendidas = function(){
+        let x=0;
+        for (let i=0; i<this.cantFilas; i++){
+            for (let j=0; j<this.cantColumnas; j++){
+                x += this.matriz[i][j].consultarEstado();
+            }
+        }
+        return x;
+    }
+
+    
 }
 module.exports = Cartel;
