@@ -35,7 +35,7 @@ function Cartel(filas,columnas){
         this.matriz[0][0].encender();
         this.matriz[0][1].encender();
         this.matriz[1][0].encender();
-        this.matriz[0][1].encender();
+        this.matriz[1][1].encender();
     }
 
 }
