@@ -1,4 +1,3 @@
-const { test } = require('picomatch');
 const Cartel = require('./Cartel');
 const Luz = require('./Luz');
 
@@ -20,7 +19,7 @@ test("crear cartel", () => {
     expect (cartel.cantFilas).toBe(100);
     expect (cartel.cantColumnas).toBe(100);
     
-
+    
 });
 
 test("encender las luces del rectangulo (0,0),(2,2)", () => {
@@ -69,8 +68,5 @@ test("error en los parametros al encender luces", () => {
         cartel.encenderLuces([0,120],[-9,89])
     }).toThrow("Las esquinas pasadas por parametro deben tener numeros de fila y columna entre 0 y 100");
 });
-
-
-
 
 
