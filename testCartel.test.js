@@ -43,5 +43,15 @@ test("encender las luces del rectangulo (0,0),(2,2) y luego apagar las luces del
     expect (cartel2.matriz[2][0].consultarEstado()).toBe(true);
 });
 
+test("cambiar las luces del rectangulo (0,0),(1,1) de apagado a prendido", () => {
+    cartel2.cambiarLuces([0,0],[1,1]);
+    expect (cartel2.cantidadLucesEncendidas()).toBe(4);
+    expect (cartel2.matriz[0][0].consultarEstado()).toBe(true);
+    expect (cartel2.matriz[0][1].consultarEstado()).toBe(true);
+    expect (cartel2.matriz[0][2].consultarEstado()).toBe(true);
+    expect (cartel2.matriz[1][0].consultarEstado()).toBe(true);
+    expect (cartel2.matriz[2][0].consultarEstado()).toBe(true);
+});
+
 
 

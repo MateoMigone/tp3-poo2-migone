@@ -45,7 +45,6 @@ function Cartel(filas,columnas){
             }
         }
     }
-
 }
 
 module.exports = Cartel;
