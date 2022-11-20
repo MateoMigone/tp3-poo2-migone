@@ -31,7 +31,10 @@ function Cartel(filas,columnas){
         return x;
     }
 
-    
+    this.encenderLuces() = function (){
+
+    }
+
 }
 
 module.exports = Cartel;
