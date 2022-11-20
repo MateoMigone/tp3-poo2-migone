@@ -39,10 +39,11 @@ function Cartel(filas,columnas){
         }
     }
     this.apagarLuces = function (esquinaSuperiorIzquierda,esquinaInferiorDerecha){
-        this.matriz[1][1].apagar();
-        this.matriz[1][2].apagar();
-        this.matriz[2][1].apagar();
-        this.matriz[2][2].apagar();
+        for (let i=esquinaSuperiorIzquierda[0]; i<=esquinaInferiorDerecha[0]; i++){
+            for (let j=esquinaSuperiorIzquierda[1]; j<=esquinaInferiorDerecha[1]; j++){
+                this.matriz[i][j].apagar();
+            }
+        }
     }
 
 }
