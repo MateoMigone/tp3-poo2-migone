@@ -8,14 +8,19 @@ beforeEach(function () {
 });
 
 test("crear cartel", () => {
+    var sonTodasLuces = true;
+    for (let i=0; i < this.cantFilas; i++){
+        for (let j=0; j<this.cantColumnas; j++){
+           sonTodasLuces = Luz.prototype.isPrototypeOf(cartel1.matriz[0][0]) ;
+        }
+    }
+    expect (sonTodasLuces).toBe(true);
     expect (cartel1.cantidadLucesEncendidas()).toBe(0);
-    expect (cartel1.cantidadLuces()).toBe(4);
-    expect (cartel1.cantFilas).toBe(2);
-    expect (cartel1.cantColumnas).toBe(2);
-    expect (Luz.prototype.isPrototypeOf(cartel1.matriz[0][0])).toBe(true);
-    expect (Luz.prototype.isPrototypeOf(cartel1.matriz[0][1])).toBe(true);
-    expect (Luz.prototype.isPrototypeOf(cartel1.matriz[1][0])).toBe(true);
-    expect (Luz.prototype.isPrototypeOf(cartel1.matriz[1][1])).toBe(true);
+    expect (cartel1.cantidadLuces()).toBe(10000);
+    expect (cartel1.cantFilas).toBe(100);
+    expect (cartel1.cantColumnas).toBe(100);
+    
+    
 });
 
 test("encender las luces del rectangulo (0,0),(2,2)", () => {
@@ -58,5 +63,10 @@ test("consultar cantidad de luces prendidas luego de prender varias", () => {
     expect (cartel2.cantidadLucesEncendidas()).toBe(12);
 });
 
+// test("error en los parametros al crear cartel", () => {
+//     expect(() => {
+//         cartel3 = new Cartel();
+//     }).toThrow("Capacidad de cola debe ser entre 10 y 30");
+// });
 
 
