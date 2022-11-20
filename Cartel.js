@@ -31,11 +31,12 @@ function Cartel(filas,columnas){
         return x;
     }
 
-    this.encenderLuces = function (){
-        this.matriz[0][0].encender();
-        this.matriz[0][1].encender();
-        this.matriz[1][0].encender();
-        this.matriz[1][1].encender();
+    this.encenderLuces = function (esquinaSuperiorIzquierda,esquinaInferiorDerecha){
+        for (let i=esquinaSuperiorIzquierda[0]; i<esquinaInferiorDerecha[0]; i++){
+            for (let j=esquinaSuperiorIzquierda[1]; j<esquinaInferiorDerecha[1]; j++){
+                this.matriz[i][j].encender();
+            }
+        }
     }
 
 }
