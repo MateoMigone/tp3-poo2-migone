@@ -1,4 +1,5 @@
 const Cartel = require('./Cartel');
+const Luz = require('./Luz');
 
 var cartel;
 beforeEach(function () {
