@@ -38,6 +38,9 @@ function Cartel(filas,columnas){
             }
         }
     }
+    this.apagarLuces = function (){
+        
+    }
 
 }
 
