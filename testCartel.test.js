@@ -3,8 +3,8 @@ const Luz = require('./Luz');
 
 var cartel;
 beforeEach(function () {
-    cartel1 = new Cartel(2,2);
-    cartel2 = new Cartel(4,4);
+    cartel1 = new Cartel();
+    cartel2 = new Cartel();
 });
 
 test("crear cartel", () => {

@@ -1,8 +1,8 @@
 const Luz = require("./Luz");
 
-function Cartel(filas,columnas){
-    this.cantFilas = filas;
-    this.cantColumnas = columnas;
+function Cartel(){
+    this.cantFilas = 100;
+    this.cantColumnas = 100;
     this.matriz = [];
     for (let i=0; i<this.cantFilas; i++){
         this.matriz[i] = [];
