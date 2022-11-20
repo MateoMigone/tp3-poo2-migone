@@ -9,8 +9,8 @@ beforeEach(function () {
 test("crear cartel", () => {
     expect (cartel.cantidadLucesEncendidas()).toBe(0);
     expect (cartel.cantidadLuces()).toBe(4);
-    expect (cartel.cantidadFilas()).toBe(2);
-    expect (cartel.cantidadColumnas()).toBe(2);
+    expect (cartel.cantidadFilas).toBe(2);
+    expect (cartel.cantidadColumnas).toBe(2);
     expect (Luz.prototype.isPrototypeOf(cartel.matriz[0][0])).toBe(true);
     expect (Luz.prototype.isPrototypeOf(cartel.matriz[0][1])).toBe(true);
     expect (Luz.prototype.isPrototypeOf(cartel.matriz[1][0])).toBe(true);
