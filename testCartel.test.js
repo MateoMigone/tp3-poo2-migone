@@ -83,3 +83,9 @@ test("error en los parametros al apagar luces", () => {
     }).toThrow("Las esquinas pasadas por parametro deben tener numeros de fila y columna entre 0 y 100");
 });
 
+test("error en los parametros al apagar luces", () => {
+    expect(() => {
+        cartel = new Cartel();
+        cartel.apagarLuces([70,80],[60,70])
+    }).toThrow("Las filas y columnas de la esquina superior izquierda deben ser mayores respectivamente que las de la esquina inferior derecha");
+});
