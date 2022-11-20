@@ -52,5 +52,11 @@ test("cambiar las luces del rectangulo (0,0),(1,1) de apagado a prendido", () =>
     expect (cartel2.matriz[1][1].consultarEstado()).toBe(true);
 });
 
+test("consultar cantidad de luces prendidas luego de prender varias", () => {
+    cartel2.encenderLuces([0,0],[1,1]);
+    cartel2.encenderLuces([1,1],[3,3]);
+    expect (cartel2.cantidadLucesEncendidas()).toBe(12);
+});
+
 
 
