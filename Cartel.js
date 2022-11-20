@@ -45,6 +45,9 @@ function Cartel(filas,columnas){
             }
         }
     }
+    this.cambiarLuces = function(){
+        
+    }
 }
 
 module.exports = Cartel;
