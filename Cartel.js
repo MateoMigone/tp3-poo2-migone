@@ -32,20 +32,31 @@ function Cartel(){
     }
 
     this.encenderLuces = function (esqSupIzq,esqInfDer){
-        if(esqSupIzq[0] < 0 || esqSupIzq[0] > 99 || esqSupIzq[1] < 0 || esqSupIzq[1] > 99 || 
-            esqInfDer[0] < 0 || esqInfDer[0] > 99 || esqInfDer[1] < 0 || esqInfDer[1] > 99){
-            throw new Error("Las esquinas pasadas por parametro deben tener numeros de fila y columna entre 0 y 100");
-        }
-        if(esqSupIzq[0] > esqInfDer[0] || esqSupIzq[1] > esqInfDer[1] ){
-            throw new Error("Las filas y columnas de la esquina superior izquierda deben ser mayores respectivamente que las de la esquina inferior derecha");
-        }
+        validarParametros(esqSupIzq,esqInfDer);
         for (let i=esqSupIzq[0]; i<=esqInfDer[0]; i++){
             for (let j=esqSupIzq[1]; j<=esqInfDer[1]; j++){
                 this.matriz[i][j].encender();
             }
         }
     }
+
     this.apagarLuces = function (esqSupIzq,esqInfDer){
+        validarParametros(esqSupIzq,esqInfDer);
+        for (let i=esqSupIzq[0]; i<=esqInfDer[0]; i++){
+            for (let j=esqSupIzq[1]; j<=esqInfDer[1]; j++){
+                this.matriz[i][j].apagar();
+            }
+        }
+    }
+
+    this.cambiarLuces = function(){
+        this.matriz[0][0].cambiar();
+        this.matriz[0][1].cambiar();
+        this.matriz[1][0].cambiar();
+        this.matriz[1][1].cambiar();
+    }
+    
+    var validarParametros = function(esqSupIzq,esqInfDer){
         if(esqSupIzq[0] < 0 || esqSupIzq[0] > 99 || esqSupIzq[1] < 0 || esqSupIzq[1] > 99 || 
             esqInfDer[0] < 0 || esqInfDer[0] > 99 || esqInfDer[1] < 0 || esqInfDer[1] > 99){
             throw new Error("Las esquinas pasadas por parametro deben tener numeros de fila y columna entre 0 y 100");
@@ -53,17 +64,6 @@ function Cartel(){
         if(esqSupIzq[0] > esqInfDer[0] || esqSupIzq[1] > esqInfDer[1] ){
             throw new Error("Las filas y columnas de la esquina superior izquierda deben ser mayores respectivamente que las de la esquina inferior derecha");
         }
-        for (let i=esqSupIzq[0]; i<=esqInfDer[0]; i++){
-            for (let j=esqSupIzq[1]; j<=esqInfDer[1]; j++){
-                this.matriz[i][j].apagar();
-            }
-        }
-    }
-    this.cambiarLuces = function(){
-        this.matriz[0][0].cambiar();
-        this.matriz[0][1].cambiar();
-        this.matriz[1][0].cambiar();
-        this.matriz[1][1].cambiar();
     }
 }
 
