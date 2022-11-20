@@ -46,6 +46,10 @@ function Cartel(){
         }
     }
     this.apagarLuces = function (esqSupIzq,esqInfDer){
+        if(esqSupIzq[0] < 0 || esqSupIzq[0] > 99 || esqSupIzq[1] < 0 || esqSupIzq[1] > 99 || 
+            esqInfDer[0] < 0 || esqInfDer[0] > 99 || esqInfDer[1] < 0 || esqInfDer[1] > 99){
+            throw new Error("Las esquinas pasadas por parametro deben tener numeros de fila y columna entre 0 y 100");
+        }
         for (let i=esqSupIzq[0]; i<=esqInfDer[0]; i++){
             for (let j=esqSupIzq[1]; j<=esqInfDer[1]; j++){
                 this.matriz[i][j].apagar();
