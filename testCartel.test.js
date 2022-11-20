@@ -11,7 +11,7 @@ test("crear cartel", () => {
     var sonTodasLuces = true;
     for (let i=0; i < this.cantFilas; i++){
         for (let j=0; j<this.cantColumnas; j++){
-           sonTodasLuces = Luz.prototype.isPrototypeOf(cartel.matriz[0][0]) ;
+           sonTodasLuces = Luz.prototype.isPrototypeOf(cartel.matriz[i][j]) ;
         }
     }
     expect (sonTodasLuces).toBe(true);
