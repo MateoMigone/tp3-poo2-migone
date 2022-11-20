@@ -5,9 +5,9 @@ function Cartel(filas,columnas){
     this.cantColumnas = columnas;
     this.matriz = [];
     for (let i=0; i<this.cantFilas; i++){
-        this.matriz[i].push([])
+        this.matriz[i] = [];
         for (let j=0; j<this.cantColumnas; j++){
-            this.matriz[i][j].push(new Luz());
+            this.matriz[i][j] = new Luz();
         }
     }
 
