@@ -6,7 +6,7 @@ beforeEach(function () {
 });
 
 test("crear luz", () => {
-    expect (luz.consultarEstado()).toBe(false);
+    expect (luz.consultarEstado()).toBe(0);
 });
 
 test("encender luz", () => {
