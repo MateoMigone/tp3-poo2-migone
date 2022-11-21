@@ -5,39 +5,49 @@ beforeEach(function () {
     luz = new Luz();
 });
 
-test("crear luz", () => {
-    expect (luz.estado).toBe(0);
+test("crear luz con intensidad 0", () => {
+    expect (luz.intensidad).toBe(0);
 });
 
-test("encender luz", () => {
+test("encender luz subiendo una intensidad", () => {
     luz.encender();
-    expect (luz.consultarEstado()).toBe(1);
+    expect (luz.intensidad).toBe(1);
 });
 
-test("apagar luz", () => {
+test("encender luz subiendo 2 intensidades", () => {
+    luz.encender();
+    luz.encender();
+    expect (luz.intensidad).toBe(2);
+});
+
+test("apagar luz bajandole una intensidad", () => {
     luz.encender();
     luz.apagar();
-    expect (luz.consultarEstado()).toBe(false);
+    expect (luz.intensidad).toBe(0);
 });
 
-test("cambiar luz de encendida a apagada", () => {
+test("apagar luz bajandole 2 intensidades", () => {
     luz.encender();
-    luz.cambiar();
-    expect (luz.consultarEstado()).toBe(false);
+    luz.encender();
+    luz.apagar();
+    luz.apagar();
+    expect (luz.intensidad).toBe(0);
 });
 
-test("cambiar luz de apagada a encendida", () => {
-    luz.apagar();
+test("cambiar luz subiendo 2 intensidades", () => {
     luz.cambiar();
-    expect (luz.consultarEstado()).toBe(true);
+    expect (luz.intensidad).toBe(2);
 });
 
-test("cambiar luz de apagada a encendida y de encendida a apagada", () => {
-    luz.apagar();
+test("cambiar luz subiendo 4 intensidades", () => {
     luz.cambiar();
     luz.cambiar();
-    expect (luz.consultarEstado()).toBe(false);
+    expect (luz.intensidad).toBe(4);
 });
+
+
+
+
 
 
 

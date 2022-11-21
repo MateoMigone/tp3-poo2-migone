@@ -1,16 +1,16 @@
 function Luz(){
-    this.estado = 0;
+    this.intensidad = 0;
     
     this.encender = function(){
-        this.estado = true;
+        this.intensidad = true;
     }
 
     this.apagar = function(){
-        this.estado = false;
+        this.intensidad = false;
     }
 
     this.cambiar = function(){
-        this.estado = !this.estado;
+        this.intensidad = !this.intensidad;
     }
 }
 
