@@ -50,10 +50,11 @@ function Cartel(){
     }
 
     this.cambiarLuces = function(){
-        this.matriz[0][0].cambiar();
-        this.matriz[0][1].cambiar();
-        this.matriz[1][0].cambiar();
-        this.matriz[1][1].cambiar();
+        for (let i=esqSupIzq[0]; i<=esqInfDer[0]; i++){
+            for (let j=esqSupIzq[1]; j<=esqInfDer[1]; j++){
+                this.matriz[i][j].cambiar();
+            }
+        }
     }
     
     var validarParametros = function(esqSupIzq,esqInfDer){
