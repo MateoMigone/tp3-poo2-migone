@@ -9,6 +9,9 @@ function Luz(){
     }
 
     this.apagar = function(){
+        if(this.intensidad == 0){
+            throw new Error("No se puede disminuir la intensidad a menos que 0")
+        }
         this.intensidad--;
     }
 
