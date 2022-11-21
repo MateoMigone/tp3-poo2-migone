@@ -49,7 +49,7 @@ function Cartel(){
         }
     }
 
-    this.cambiarLuces = function(){
+    this.cambiarLuces = function(esqSupIzq,esqInfDer){
         for (let i=esqSupIzq[0]; i<=esqInfDer[0]; i++){
             for (let j=esqSupIzq[1]; j<=esqInfDer[1]; j++){
                 this.matriz[i][j].cambiar();
