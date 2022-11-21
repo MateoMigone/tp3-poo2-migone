@@ -65,6 +65,16 @@ test("chequear si la luz esta prendida", () => {
     expect (luz.estaPrendida()).toBe(true);
 });
 
+test("encender luz si ya esta la intensidad al maximo", () => {
+    expect(() => {
+        cartel.cambiar();
+        cartel.cambiar();
+        cartel.cambiar();
+        cartel.cambiar();
+        cartel.cambiar();
+        cartel.encender();
+    }).toThrow("No se puede aumentar la intensidad a mas que 10");
+});
 
 
 
