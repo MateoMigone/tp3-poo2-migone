@@ -2,6 +2,9 @@ function Luz(){
     this.intensidad = 0;
     
     this.encender = function(){
+        if(this.intensidad == 10){
+            throw new Error("No se puede aumentar la intensidad a mas que 10")
+        }
         this.intensidad ++;
     }
 
