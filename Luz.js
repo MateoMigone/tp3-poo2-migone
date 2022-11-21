@@ -10,7 +10,8 @@ function Luz(){
     }
 
     this.cambiar = function(){
-        this.intensidad += 2;
+        this.encender();
+        this.encender();
     }
 
     this.estaPrendida = function(){
