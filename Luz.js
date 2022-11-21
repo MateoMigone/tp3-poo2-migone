@@ -6,7 +6,7 @@ function Luz(){
     }
 
     this.apagar = function(){
-        this.intensidad = false;
+        this.intensidad = 0;
     }
 
     this.cambiar = function(){
