@@ -22,18 +22,18 @@ test("crear cartel", () => {
     
 });
 
-test("encender las luces del rectangulo (0,0),(2,2)", () => {
+test("encender las luces del rectangulo (0,0),(2,2) subiendoles una intensidad", () => {
     cartel.encenderLuces([0,0],[2,2]);
     expect (cartel.cantidadLucesEncendidas()).toBe(9);
-    expect (cartel.matriz[0][0].consultarEstado()).toBe(true);
-    expect (cartel.matriz[0][1].consultarEstado()).toBe(true);
-    expect (cartel.matriz[0][2].consultarEstado()).toBe(true);
-    expect (cartel.matriz[1][0].consultarEstado()).toBe(true);
-    expect (cartel.matriz[1][1].consultarEstado()).toBe(true);
-    expect (cartel.matriz[1][2].consultarEstado()).toBe(true);
-    expect (cartel.matriz[2][0].consultarEstado()).toBe(true);
-    expect (cartel.matriz[2][1].consultarEstado()).toBe(true);
-    expect (cartel.matriz[2][2].consultarEstado()).toBe(true);
+    expect (cartel.matriz[0][0].intensidad).toBe(1);
+    expect (cartel.matriz[0][1].intensidad).toBe(1);
+    expect (cartel.matriz[0][2].intensidad).toBe(1);
+    expect (cartel.matriz[1][0].intensidad).toBe(1);
+    expect (cartel.matriz[1][1].intensidad).toBe(1);
+    expect (cartel.matriz[1][2].intensidad).toBe(1);
+    expect (cartel.matriz[2][0].intensidad).toBe(1);
+    expect (cartel.matriz[2][1].intensidad).toBe(1);
+    expect (cartel.matriz[2][2].intensidad).toBe(1);
 });
 
 test("encender las luces del rectangulo (0,0),(2,2) y luego apagar las luces del rectangulo (1,1),(2,2)", () => {
