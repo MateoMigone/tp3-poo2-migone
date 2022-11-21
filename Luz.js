@@ -12,6 +12,10 @@ function Luz(){
     this.cambiar = function(){
         this.intensidad += 2;
     }
+
+    this.estaPrendida = function(){
+        return false;
+    } 
 }
 
 module.exports = Luz;
