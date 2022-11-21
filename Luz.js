@@ -14,7 +14,9 @@ function Luz(){
     }
 
     this.estaPrendida = function(){
-        return false;
+        let value;
+        this.intensidad > 0 ? value = true : value = false;
+        return value
     } 
 }
 
