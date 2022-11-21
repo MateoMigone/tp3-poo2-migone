@@ -40,11 +40,11 @@ test("encender las luces del rectangulo (0,0),(2,2) y luego apagar las luces del
     cartel.encenderLuces([0,0],[2,2]);
     cartel.apagarLuces([1,1],[2,2]);
     expect (cartel.cantidadLucesEncendidas()).toBe(5);
-    expect (cartel.matriz[0][0].intensiadad).toBe(1);
-    expect (cartel.matriz[0][1].intensiadad).toBe(1);
-    expect (cartel.matriz[0][2].intensiadad).toBe(1);
-    expect (cartel.matriz[1][0].intensiadad).toBe(1);
-    expect (cartel.matriz[2][0].intensiadad).toBe(1);
+    expect (cartel.matriz[0][0].intensidad).toBe(1);
+    expect (cartel.matriz[0][1].intensidad).toBe(1);
+    expect (cartel.matriz[0][2].intensidad).toBe(1);
+    expect (cartel.matriz[1][0].intensidad).toBe(1);
+    expect (cartel.matriz[2][0].intensidad).toBe(1);
 });
 
 test("cambiar las luces del rectangulo (0,0),(1,1) de apagado a prendido", () => {
