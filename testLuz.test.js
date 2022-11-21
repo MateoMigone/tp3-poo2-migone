@@ -74,7 +74,12 @@ test("encender luz si ya esta la intensidad al maximo", () => {
         luz.encender();
         luz.cambiar();
     }).toThrow("No se puede aumentar la intensidad a mas que 10");
+});
 
+test("apagar luz si ya esta apagada", () => {
+    expect(() => {
+        luz.apagar();
+    }).toThrow("No se puede disminuir la intensidad a menos que 0");
 });
 
 
