@@ -43,6 +43,7 @@ test("cambiar luz subiendo 4 intensidades", () => {
     luz.cambiar();
     luz.cambiar();
     expect (luz.intensidad).toBe(4);
+    
 });
 
 
