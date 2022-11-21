@@ -1,10 +1,6 @@
 function Luz(){
     this.estado = 0;
     
-    this.consultarEstado = function(){
-        return this.estado;
-    }
-
     this.encender = function(){
         this.estado = true;
     }

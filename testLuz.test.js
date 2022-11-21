@@ -6,12 +6,12 @@ beforeEach(function () {
 });
 
 test("crear luz", () => {
-    expect (luz.consultarEstado()).toBe(0);
+    expect (luz.estado).toBe(0);
 });
 
 test("encender luz", () => {
     luz.encender();
-    expect (luz.consultarEstado()).toBe(true);
+    expect (luz.consultarEstado()).toBe(1);
 });
 
 test("apagar luz", () => {
