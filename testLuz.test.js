@@ -49,6 +49,24 @@ test("cambiar luz subiendo 4 intensidades", () => {
 
 });
 
+test("chequear si la luz esta prendida", () => {
+    expect (luz.estaPrendida()).toBe(false);
+
+});
+
+test("chequear si la luz esta prendida", () => {
+    luz.encender();
+    expect (luz.estaPrendida()).toBe(true);
+});
+
+test("chequear si la luz esta prendida", () => {
+    luz.encender();
+    luz.cambiar();
+    expect (luz.estaPrendida()).toBe(true);
+});
+
+
+
 
 
 

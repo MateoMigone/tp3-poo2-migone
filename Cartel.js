@@ -25,7 +25,7 @@ function Cartel(){
         let x=0;
         for (let i=0; i<this.cantFilas; i++){
             for (let j=0; j<this.cantColumnas; j++){
-                x += this.matriz[i][j].consultarEstado();
+                x += this.matriz[i][j].intensidad();
             }
         }
         return x;
