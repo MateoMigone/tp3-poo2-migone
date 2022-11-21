@@ -1,5 +1,5 @@
 function Luz(){
-    this.estado = false;
+    this.estado = 0;
     
     this.consultarEstado = function(){
         return this.estado;
