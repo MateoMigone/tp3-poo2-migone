@@ -71,10 +71,10 @@ test("encender luz si ya esta la intensidad al maximo", () => {
         luz.cambiar();
         luz.cambiar();
         luz.cambiar();
-        luz.cambiar();
         luz.encender();
+        luz.cambiar();
     }).toThrow("No se puede aumentar la intensidad a mas que 10");
-    
+
 });
 
 
