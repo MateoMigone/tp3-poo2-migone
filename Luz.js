@@ -2,7 +2,7 @@ function Luz(){
     this.intensidad = 0;
     
     this.encender = function(){
-        this.intensidad = 1;
+        this.intensidad ++;
     }
 
     this.apagar = function(){
